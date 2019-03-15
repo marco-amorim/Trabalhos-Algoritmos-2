@@ -14,7 +14,7 @@ public class Trabalho2 {
 	static String listaAlunos = "ListaAlunos.txt";
 
 	// 1) Crie uma matriz global do tipo Aluno e com o tamanho informado pelo
-	// usuário, para armazenar as seguintes informações: Nome, Nota, Genero e Idade.
+	// usuÃ¡rio, para armazenar as seguintes informaÃ§Ãµes: Nome, Nota, Genero e Idade.
 	static Aluno alunos[][] = new Aluno[1000][1000];
 
 	public static class Aluno {
@@ -33,7 +33,7 @@ public class Trabalho2 {
 			TamanhoPlanilha();
 
 			while (limiteTurma < (tamanhoLinha * tamanhoColuna)) {
-				JOptionPane.showMessageDialog(null, "A acomodação máxima para essa sala é de 50 Alunos. \n"
+				JOptionPane.showMessageDialog(null, "A acomodaÃ§Ã£o mÃ¡xima para essa sala Ã© de 50 Alunos. \n"
 						+ "Por favor, diminua o tamanho de sua planilha.");
 				TamanhoPlanilha();
 			}
@@ -41,22 +41,22 @@ public class Trabalho2 {
 			LerAlunos();
 			break;
 		case 2:
-			JOptionPane.showMessageDialog(null, "A quantidade de vagas abertas na turma é: " + VagasAbertas());
+			JOptionPane.showMessageDialog(null, "A quantidade de vagas abertas na turma Ã©: " + VagasAbertas());
 			break;
 		case 3:
 			JOptionPane.showMessageDialog(null,
-					"A quantidade de Alunas do sexo feminino é: " + QuantidadeAlunas(Alunas));
+					"A quantidade de Alunas do sexo feminino Ã©: " + QuantidadeAlunas(Alunas));
 			break;
 		case 4:
-			JOptionPane.showMessageDialog(null, "A média de notas da turma é: " + MediaTurma());
+			JOptionPane.showMessageDialog(null, "A mÃ©dia de notas da turma Ã©: " + MediaTurma());
 			break;
 		case 5:
 			JOptionPane.showMessageDialog(null,
-					"Preencha as informações a seguir para o cálculo de Alunos em recuperação final.");
+					"Preencha as informaÃ§Ãµes a seguir para o cÃ¡lculo de Alunos em recuperaÃ§Ã£o final.");
 			break;
 		case 6:
 			JOptionPane.showMessageDialog(null,
-					"Preencha as informações a seguir para o cálculo da porcentagem de Alunos que atendem aos requisitos.");
+					"Preencha as informaÃ§Ãµes a seguir para o cÃ¡lculo da porcentagem de Alunos que atendem aos requisitos.");
 			break;
 		case 7:
 			CriarArquivo();
@@ -65,12 +65,12 @@ public class Trabalho2 {
 			JOptionPane.showMessageDialog(null, "Obrigado pelo acesso.");
 			break;
 		default:
-			JOptionPane.showMessageDialog(null, "Por favor, insira uma opção válida.");
+			JOptionPane.showMessageDialog(null, "Por favor, insira uma opÃ§Ã£o vÃ¡lida.");
 
 		}
 	}
 
-	// 2) Crie um algoritmo para Ler as informações de todos os Alunos, (utilize uma
+	// 2) Crie um algoritmo para Ler as informaÃ§Ãµes de todos os Alunos, (utilize uma
 	// sub-rotina do tipo procedimento).
 	public static void LerAlunos() {
 
@@ -78,22 +78,22 @@ public class Trabalho2 {
 		for (i = 0; i < tamanhoLinha; i++) {
 			for (j = 0; j < tamanhoColuna; j++) {
 				alunos[i][j] = new Aluno();
-				alunos[i][j].nome = JOptionPane.showInputDialog("Digite o Nome do Aluno número: " + referenciaAlunos);
+				alunos[i][j].nome = JOptionPane.showInputDialog("Digite o Nome do Aluno nÃºmero: " + referenciaAlunos);
 				alunos[i][j].idade = Integer
-						.parseInt(JOptionPane.showInputDialog("Digite a Idade do Aluno número: " + referenciaAlunos));
+						.parseInt(JOptionPane.showInputDialog("Digite a Idade do Aluno nÃºmero: " + referenciaAlunos));
 				alunos[i][j].genero = JOptionPane
-						.showInputDialog("Digite o Gênero (M ou F) do Aluno número: " + referenciaAlunos);
+						.showInputDialog("Digite o GÃªnero (M ou F) do Aluno nÃºmero: " + referenciaAlunos);
 				alunos[i][j].nota = Double
-						.parseDouble(JOptionPane.showInputDialog("Digite a Nota do Aluno número: " + referenciaAlunos));
+						.parseDouble(JOptionPane.showInputDialog("Digite a Nota do Aluno nÃºmero: " + referenciaAlunos));
 
 				referenciaAlunos++;
 			}
 		}
 	}
 
-	// 3) Crie uma sub-rotina do tipo função para calcular quantas vagas abertas
-	// ainda existem na sua sala, (Para essa questão utilize uma variável constante
-	// para definir a capacidade máxima da sala).
+	// 3) Crie uma sub-rotina do tipo funÃ§Ã£o para calcular quantas vagas abertas
+	// ainda existem na sua sala, (Para essa questÃ£o utilize uma variÃ¡vel constante
+	// para definir a capacidade mÃ¡xima da sala).
 	public static int VagasAbertas() {
 
 		int vagasAbertas, alunosMatriculados;
@@ -105,9 +105,9 @@ public class Trabalho2 {
 		return vagasAbertas;
 	}
 
-	// 4) Faça um algoritmo que possui uma sub-rotina do tipo função para calcular a
-	// quantidade de Alunas do sexo feminino, (utilize variáveis globais para a
-	// passagem de parâmetro por referência).
+	// 4) FaÃ§a um algoritmo que possui uma sub-rotina do tipo funÃ§Ã£o para calcular a
+	// quantidade de Alunas do sexo feminino, (utilize variÃ¡veis globais para a
+	// passagem de parÃ¢metro por referÃªncia).
 	public static int QuantidadeAlunas(int quantidadeAlunas) {
 
 		for (i = 0; i < tamanhoLinha; i++) {
@@ -120,8 +120,8 @@ public class Trabalho2 {
 		return quantidadeAlunas;
 	}
 
-	// 5) Faça um algoritmo para calcular a média de notas da turma, (utilize uma
-	// sub-rotina do tipo função).
+	// 5) FaÃ§a um algoritmo para calcular a mÃ©dia de notas da turma, (utilize uma
+	// sub-rotina do tipo funÃ§Ã£o).
 	public static double MediaTurma() {
 
 		double somaNotas = 0.0, media = 0.0;
@@ -137,9 +137,9 @@ public class Trabalho2 {
 		return media;
 	}
 
-	// 6) Faça um algoritmo para mostrar a quantidade de Alunos que ficaram em
-	// recuperação final, peça para o usuário informar uma nota de corte, (utilize
-	// uma sub-rotina do tipo função).
+	// 6) FaÃ§a um algoritmo para mostrar a quantidade de Alunos que ficaram em
+	// recuperaÃ§Ã£o final, peÃ§a para o usuÃ¡rio informar uma nota de corte, (utilize
+	// uma sub-rotina do tipo funÃ§Ã£o).
 	public static int RecFinal(double notaDeCorte) {
 
 		int alunosRecFinal = 0;
@@ -155,9 +155,9 @@ public class Trabalho2 {
 		return alunosRecFinal;
 	}
 
-	// 7) Faça um algoritmo para calcular a porcentagem de Alunos que estejam acima
-	// ou na mesma situação dos requisitos de Nota e Idade, peça as respectivas
-	// informações ao usuário, (utilize uma sub-rotina do tipo função).
+	// 7) FaÃ§a um algoritmo para calcular a porcentagem de Alunos que estejam acima
+	// ou na mesma situaÃ§Ã£o dos requisitos de Nota e Idade, peÃ§a as respectivas
+	// informaÃ§Ãµes ao usuÃ¡rio, (utilize uma sub-rotina do tipo funÃ§Ã£o).
 	public static double PorcentagemNotaIdade(double notaMinima, int idadeMinima) {
 
 		int quantidadeAlunos = 0;
@@ -215,7 +215,7 @@ public class Trabalho2 {
 					generoLista = alunos[i][j].genero;
 					notaLista = alunos[i][j].nota;
 					idadeLista = alunos[i][j].idade;
-					lista.write("Nome: " + nomeLista + " / " + "Gênero: " + generoLista + " / " + "Nota: " + notaLista + " / "
+					lista.write("Nome: " + nomeLista + " / " + "GÃªnero: " + generoLista + " / " + "Nota: " + notaLista + " / "
 							+ "Idade: " + idadeLista);
 					lista.newLine();
 
@@ -226,7 +226,7 @@ public class Trabalho2 {
 			lista.close();
 
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Não foi possível abrir o arquivo para a escrita.");
+			JOptionPane.showMessageDialog(null, "NÃ£o foi possÃ­vel abrir o arquivo para a escrita.");
 		}
 
 	}
@@ -238,12 +238,12 @@ public class Trabalho2 {
 
 		do {
 
-			menu = Integer.parseInt(JOptionPane.showInputDialog("Por favor, digite a opção desejada: \n"
-					+ "1) Para criar sua planilha e preencher as informações dos Alunos. \n"
+			menu = Integer.parseInt(JOptionPane.showInputDialog("Por favor, digite a opÃ§Ã£o desejada: \n"
+					+ "1) Para criar sua planilha e preencher as informaÃ§Ãµes dos Alunos. \n"
 					+ "2) Para calcular a quantidade de vagas abertas na turma. \n"
 					+ "3) Para calcular a quantidade de Alunas do sexo feminino. \n"
-					+ "4) Para calcular a média de notas da turma. \n"
-					+ "5) Para quantidade de Alunos em recuperação final. \n"
+					+ "4) Para calcular a mÃ©dia de notas da turma. \n"
+					+ "5) Para quantidade de Alunos em recuperaÃ§Ã£o final. \n"
 					+ "6) Para calcular a porcentagem de Alunos que se enquadram nos requisitos de nota e idade. \n"
 					+ "7) Para criar um arquivo com o nome dos Alunos. \n" + "8) Para sair."));
 
@@ -252,23 +252,23 @@ public class Trabalho2 {
 			if (menu == 5) {
 
 				notaDeCorte = Double
-						.parseDouble(JOptionPane.showInputDialog("Digite a nota de corte para a recuperação final."));
+						.parseDouble(JOptionPane.showInputDialog("Digite a nota de corte para a recuperaÃ§Ã£o final."));
 
 				JOptionPane.showMessageDialog(null,
-						"A quantidade de Alunos que ficaram em recuperação final é: " + RecFinal(notaDeCorte));
+						"A quantidade de Alunos que ficaram em recuperaÃ§Ã£o final Ã©: " + RecFinal(notaDeCorte));
 			}
 
 			if (menu == 6) {
 
-				notaQuestao7 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota mínima."));
-				idadeQuestao7 = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade mínima."));
+				notaQuestao7 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota mÃ­nima."));
+				idadeQuestao7 = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade mÃ­nima."));
 
-				JOptionPane.showMessageDialog(null, "A porcentagem de Alunos que se enquadram nos requisitos é: "
+				JOptionPane.showMessageDialog(null, "A porcentagem de Alunos que se enquadram nos requisitos Ã©: "
 						+ PorcentagemNotaIdade(notaQuestao7, idadeQuestao7) + "%");
 
 			}
 
-		} while (menu != 7);
+		} while (menu != 8);
 
 	}
 }
